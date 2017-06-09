@@ -48,6 +48,7 @@ public class Utility {
                     City city = new City();
                     city.setCityName(cityObject.getString("name"));
                     city.setCityCode(cityObject.getInt("id"));
+                    city.setProvinceId(provinceId);
                     city.save();
                 }
                 return true;
@@ -69,6 +70,7 @@ public class Utility {
                     Country country = new Country();
                     country.setCountryName(countryObject.getString("name"));
                     country.setWeatherId(countryObject.getString("weather_id"));
+                    country.setCityId(cityId);
                     country.save();
                 }
                 return true;
